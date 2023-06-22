@@ -1,4 +1,4 @@
-#include "monty.h"
+#include "monty.h"
 
 /**
  * start_vars -  initializes the members of a structure
@@ -40,6 +40,9 @@ instruction_t *create_instruction()
 	instruct[4].opcode = "swap", instruct[4].f = op_swap;
 	instruct[5].opcode = "add", instruct[5].f = op_add;
 	instruct[6].opcode = "nop", instruct[6].f = NULL;
+	instruct[7].opcode = "sub", instruct[7].f = op_sub;
+	instruct[8].opcode = "div", instruct[8].f = op_divi;
+
 	return (instruct);
 }
 
@@ -64,7 +67,7 @@ int function_call(vars *var, char *opcode)
 	if (strlen(opcode) != 0 && opcode[0] != '#')
 	{
 		fprintf(stderr, "L%u: unknown instruction %s\n",
-			var->line_number, opcode);
+				var->line_number, opcode);
 		return (EXIT_FAILURE);
 	}
 
@@ -109,3 +112,4 @@ void free_all(void)
 		free(gvar.head);
 	}
 }
+
