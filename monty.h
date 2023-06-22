@@ -76,5 +76,6 @@ void op_push(stack_t **, unsigned int);
 void op_pint(stack_t **, unsigned int);
 void op_pop(stack_t **, unsigned int);
 void op_swap(stack_t **, unsigned int);
+void op_add(stack_t **, unsigned int);
 
 #endif

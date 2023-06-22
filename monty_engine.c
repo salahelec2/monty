@@ -26,7 +26,7 @@ int start_vars(vars *var)
  */
 instruction_t *create_instruction()
 {
-	instruction_t *instruct = malloc(sizeof(instruction_t) * 5);
+	instruction_t *instruct = malloc(sizeof(instruction_t) * 6);
 
 	if (!instruct)
 	{
@@ -38,6 +38,7 @@ instruction_t *create_instruction()
 	instruct[2].opcode = "pint", instruct[2].f = op_pint;
 	instruct[3].opcode = "pop", instruct[3].f = op_pop;
 	instruct[4].opcode = "swap", instruct[4].f = op_swap;
+	instruct[5].opcode = "add", instruct[5].f = op_add;
 	return (instruct);
 }
 
