@@ -26,7 +26,7 @@ int start_vars(vars *var)
  */
 instruction_t *create_instruction()
 {
-	instruction_t *instruct = malloc(sizeof(instruction_t) * 7);
+	instruction_t *instruct = malloc(sizeof(instruction_t) * 9);
 
 	if (!instruct)
 	{
