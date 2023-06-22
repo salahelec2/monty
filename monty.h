@@ -71,9 +71,9 @@ int function_call(vars *var, char *opcode);
 void free_all(void);
 int _isdigit(char *string);
 
-void op_pall(stack_t **stack, unsigned int line_number);
-void op_push(stack_t **stack, unsigned int line_number);
-void op_pint(stack_t **stack, unsigned int line_number);
-void op_pop(stack_t **stack, unsigned int line_number);
+void op_pall(stack_t **, unsigned int);
+void op_push(stack_t **, unsigned int);
+void op_pint(stack_t **, unsigned int);
+void op_pop(stack_t **, unsigned int);
 
 #endif
