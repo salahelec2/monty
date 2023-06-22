@@ -20,7 +20,7 @@ void op_add(stack_t **stack, unsigned int line_number)
 
 
 /**
- * sub - substract the top two elements of the stack
+ * op_sub - substract the top two elements of the stack
  * @stack: Double linked list
  * @line_number: Line counter
  */
@@ -38,7 +38,7 @@ void op_sub(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * divi - divide the top two elements of the stack
+ * op_divi - divide the top two elements of the stack
  * @stack: Double linked list
  * @line_number: File line counter
  */
