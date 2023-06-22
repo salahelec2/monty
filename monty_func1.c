@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * pall - Print list
+ * op_pall - Print list
  * @stack: data
  * @line_number: File line execution
  */
@@ -20,7 +20,7 @@ void op_pall(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * push - Insert a new value in list
+ * op_push - Insert a new value in list
  * @stack: Double linked list
  * @line_number: File line execution
  */
@@ -63,7 +63,7 @@ void op_push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pint - Print last node
+ * op_pint - Print last node
  * @stack: Double linked list
  * @line_number: File line execution
  */
@@ -76,4 +76,27 @@ void op_pint(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*stack)->n);
+}
+
+/**
+* op_pop - Delete top element of list
+* @stack: Double linked list
+* @line_number: line
+*/
+void op_pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *tmp;
+
+	if (!*stack)
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+		free_all();
+		exit(EXIT_FAILURE);
+	}
+
+	tmp = *stack;
+	*stack = tmp->next;
+	if (tmp->next)
+		tmp->next->prev = NULL;
+	free(tmp);
 }
