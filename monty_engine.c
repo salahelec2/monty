@@ -35,6 +35,7 @@ instruction_t *create_instruction()
 	}
 	instruct[0].opcode = "pall", instruct[0].f = op_pall;
 	instruct[1].opcode = "push", instruct[1].f = op_push;
+	instruct[2].opcode = "pint", instruct[2].f = op_pint;
 	return (instruct);
 }
 
