@@ -58,7 +58,7 @@ void op_pstr(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * rotl - s
+ * op_rotl - s
  * @stack: Double linked list
  * @line_number: File line execution
  */
@@ -79,7 +79,7 @@ void op_rotl(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * rotr - s
+ * op_rotr - s
  * @stack: Double linked list
  * @line_number: File line execution
  */
